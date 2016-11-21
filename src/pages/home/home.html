@@ -1,0 +1,365 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><a href="#"><img src="../../assets/img/mscreativepixel_logo.png" alt=""/></a></ion-title>
+  </ion-toolbar>
+  <ion-navbar class="desktop-navbar">
+    <button ion-item>Home</button>
+    <button ion-item>About</button>
+    <button ion-item>Portfolio</button>
+    <button ion-item>Blog</button>
+    <button ion-item>Forum</button>
+    <button ion-item>Contact Us</button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding #content>
+    
+    <!--Slider-->
+    <ion-slides #mySlider>
+        <ion-slide>
+          <h1>Meet Higher standards.</h1>
+            <section class="heythere">
+                Hello there, I'm <h2>Manjeet Singh</h2>,<br>a Front-End Developer based in Chandigarh, India.<br> 
+                I enjoy building creative, awesome websites and I love to be creative.
+            </section>
+            <a href="#" class="scrollto-prtflo" (click)="scrollToAbout()">scrollto-prtflo</a>
+        </ion-slide>
+      </ion-slides>
+      <div class="swiper-button-next hide"></div>
+      <div class="swiper-button-prev hide"></div>
+    <!--./Slider-->
+    
+    <!--Contact Us Mid-->
+    <ion-card text-center>
+      <ion-card-content>
+         Start your project today <button ion-button>Contact Us</button>
+      </ion-card-content>
+    </ion-card>
+    <!--./Contact Us Mid-->
+    
+    <!--About Me-->
+    <ion-grid aboutme #aboutme>
+      <ion-row>
+        <ion-col width-33><img src="../../assets/img/circle_bg_about_me.png" alt=""/></ion-col>
+        <ion-col width-75>
+            <h2 text-uppercase>Welcome to MSCREATIVEPIXEL.COM</h2>
+            <p>My name is Manjeet Singh a web/Graphic designer and UI developer from city beautiful Chandigarh, India.<br>
+I've around 5 years of experience in web/graphic design and in front end development. I learned all of my design/development skills on the job.</p>
+            <p>I love to design simple, clean and user friendly web layouts and I enjoy using my skills such as XHTML, HTML5, CSS2, CSS3, LESS, SASS, jQuery and Twitter Bootstrap. 
+              I love to create pixel perfect and 100% responsive valid code. I design and develop with both brain and beauty.</p>
+            <button ion-button medium margin-top>Get in Touch</button>  
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!--./About Me-->
+    
+    <!--Intrested Sectors-->
+    <ion-grid intrested-sectors light-blue>
+        <ion-row header-sectors>
+            <ion-col>
+                <h2 white text-uppercase>Interested Sectors</h2>
+            </ion-col>
+        </ion-row>
+      <ion-row>
+        <ion-col width-33>
+            <div outer-circle pull-right text-center>
+                <div inner-circle>
+                    <h3 text-uppercase white>Our ideas, imagination</h3>
+                    <a href="#" circle-link>Circle Link</a>
+                </div>
+            </div>
+        </ion-col>
+        <ion-col width-33>
+            <div outer-circle text-center>
+                <div inner-circle>
+                    <h3 text-uppercase white>Our ideas, imagination</h3>
+                    <a href="#" circle-link>Circle Link</a>
+                </div>
+            </div>
+        </ion-col>
+        <ion-col width-33>
+            <div outer-circle pull-left text-center>
+                <div inner-circle>
+                    <h3 text-uppercase white>Our ideas, imagination</h3>
+                    <a href="#" circle-link>Circle Link</a>
+                </div>
+            </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!--./Intrested Sectors-->
+    
+    <!--Counters-->
+    <ion-grid counters text-center pos-relative white>
+        <div overlay></div>
+        <ion-row overlay-content>
+            <ion-col width-33>
+                <div pull-right text-center>
+                    <p><ion-icon name="happy"></ion-icon></p>
+                    <h2>99</h2>
+                    <h3 text-uppercase padding-top>Happy Clients</h3>
+                </div>
+            </ion-col>
+            <ion-col width-33>
+                <div>
+                    <p><ion-icon name="laptop"></ion-icon></p>
+                    <h2>695</h2>
+                    <h3 text-uppercase padding-top>PROJECTS COMPLETED</h3>
+                </div>
+            </ion-col>
+            <ion-col width-33 pull-left>
+                <div pull-left text-center>
+                    <p><ion-icon name="chatboxes"></ion-icon></p>
+                    <h2>989</h2>
+                    <h3 text-uppercase padding-top>COMMENTS RESERVED</h3>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!--./Counters-->
+    
+    
+    <!--Recent Work-->
+    <ion-grid intrested-sectors recent-work>
+        <ion-row header-sectors>
+            <ion-col>
+                <h2 white text-uppercase>Recent Work</h2>
+            </ion-col>
+        </ion-row>
+      <ion-row recent-work-row text-center>
+        <ion-col width-25>
+            <ion-card>
+              <img src="../../assets/img/slider-img44.jpg" alt="">
+              <ion-card-content>
+                <h2>Marty McFly</h2>
+                <p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
+              </ion-card-content>
+              <ion-row>
+                <ion-col text-right>
+                  <button primary clear small>
+                    <ion-icon name="logo-angular"></ion-icon>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button primary clear small>
+                    <ion-icon name="ionic"></ion-icon>
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+        </ion-col>
+        <ion-col width-25>
+            <ion-card>
+              <img src="../../assets/img/slider-img44.jpg" alt="">
+              <ion-card-content>
+                <h2>Marty McFly</h2>
+                <p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
+              </ion-card-content>
+              <ion-row>
+                <ion-col width-33 text-right>
+                  <button primary clear small>
+                    <ion-icon name="logo-angular"></ion-icon>
+                  </button>
+                </ion-col>
+                <ion-col width-33 text-center>
+                  <button primary clear small>
+                    <ion-icon name="logo-android"></ion-icon>
+                  </button>
+                </ion-col>
+                <ion-col width-33>
+                  <button primary clear small>
+                    <ion-icon name="logo-angular"></ion-icon>
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+        </ion-col>
+        <ion-col width-25>
+            <ion-card>
+              <img src="../../assets/img/slider-img44.jpg" alt="">
+              <ion-card-content>
+                <h2>Marty McFly</h2>
+                <p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
+              </ion-card-content>
+              <ion-row text-center>
+                <ion-col width-25>
+                  <button primary clear small>
+                    <ion-icon name="logo-html5"></ion-icon>
+                  </button>
+                </ion-col>
+                <ion-col width-25>
+                  <button primary clear small>
+                    <ion-icon name="logo-angular"></ion-icon>
+                  </button>
+                </ion-col>
+                <ion-col width-25>
+                  <button primary clear small>
+                    <ion-icon name="logo-android"></ion-icon>
+                  </button>
+                </ion-col>
+                <ion-col width-25>
+                  <button primary clear small>
+                    <ion-icon name="ionic"></ion-icon>
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+        </ion-col>
+        <ion-col width-25>
+            <ion-card>
+              <img src="../../assets/img/slider-img44.jpg" alt="">
+              <ion-card-content>
+                <h2>Marty McFly</h2>
+                <p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
+              </ion-card-content>
+              <ion-row>
+                <ion-col text-right>
+                  <button primary clear small>
+                    <ion-icon name="logo-angular"></ion-icon>
+                  </button>
+                </ion-col>
+                <ion-col>
+                  <button primary clear small>
+                    <ion-icon name="ionic"></ion-icon>
+                  </button>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!--./Recent Work-->
+    
+    <!--More Amazing Work-->
+    <ion-grid amazing-work white text-center>
+        <ion-row>
+            <ion-col width-50>
+               <ion-icon name="git-network"></ion-icon><span>WANT TO SEE MORE AMAZING WORKS?</span>
+            </ion-col>
+            <ion-col width-50>
+               <button ion-button>View Portfolio</button>
+               <button ion-button>Subscribe Us</button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!--./More Amazing Work-->
+    
+    
+    <!--Technologies-->
+    <ion-grid intrested-sectors technologies light-gray>
+        <ion-row header-sectors>
+            <ion-col>
+                <h2 white text-uppercase>Technologies</h2>
+            </ion-col>
+        </ion-row>
+      <ion-row technologies-row>
+        <ion-col width-20>
+            <div text-center>
+                <span icon-wrap><ion-icon name="logo-android"></ion-icon></span>
+                <p>Android</p>
+            </div>
+        </ion-col>
+        <ion-col width-20>
+            <div text-center>
+                <span icon-wrap><ion-icon name="logo-html5"></ion-icon></span>
+                <p>HTML5</p>
+            </div>
+        </ion-col>
+        <ion-col width-20>
+            <div text-center>
+                <span icon-wrap><ion-icon name="logo-angular"></ion-icon></span>
+                <p>Angular</p>
+            </div>
+        </ion-col>
+        <ion-col width-20>
+            <div text-center>
+                <span icon-wrap><ion-icon name="logo-javascript"></ion-icon></span>
+                <p>Javascript</p>
+            </div>
+        </ion-col>
+        <ion-col width-20>
+            <div text-center>
+                <span icon-wrap><ion-icon name="ionic"></ion-icon></span>
+                <p>ionic</p>
+            </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <!--./Technologies-->
+    
+    <!--More Amazing Work-->
+    <ion-grid testimonials text-center>
+        <ion-row>
+            <ion-col width-33>
+                <div testibox>
+                    <p><img src="../../assets/img/client.jpg" alt=""></p>
+                    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h2>
+                    <h3 text-uppercase padding-top>UMAN - YORITZ</h3>
+                </div>
+            </ion-col>
+            <ion-col width-33>
+                <div testibox>
+                    <p><img src="../../assets/img/client2.jpg" alt=""></p>
+                    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h2>
+                    <h3 text-uppercase padding-top>UMAN - YORITZ</h3>
+                </div>
+            </ion-col>
+            <ion-col width-33>
+                <div testibox>
+                    <p><img src="../../assets/img/client3.jpg" alt=""></p>
+                    <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h2>
+                    <h3 text-uppercase padding-top>UMAN - YORITZ</h3>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <!--./More Amazing Work-->
+    
+    <!--Footer-->
+    <ion-toolbar foo white padding-vertical>
+      <ion-row>
+        <ion-col width-50>
+            <h2 padding>Leave a Message Here</h2>
+            <form (ngSubmit)="logForm()">
+              <ion-item>
+                <ion-label floating>Name</ion-label>
+                <ion-input type="text" [(ngModel)]="todo.title" name="title"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Email</ion-label>
+                <ion-input type="text" [(ngModel)]="todo.email" name="email"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label floating>Description</ion-label>
+                <ion-textarea [(ngModel)]="todo.description" name="description"></ion-textarea>
+              </ion-item>
+              <button ion-button type="submit" block>Contact Us</button>
+            </form>
+        </ion-col>
+        <ion-col width-33 offset-10 socials>
+            <h2 padding>Stay in Touch</h2>
+            <ion-item>
+                <button ion-button clear><ion-icon name="logo-facebook"></ion-icon></button>
+                <button ion-button clear><ion-icon name="logo-twitter"></ion-icon></button>
+                <button ion-button clear><ion-icon name="logo-instagram"></ion-icon></button>
+                <button ion-button clear><ion-icon name="logo-linkedin"></ion-icon></button>
+                <button ion-button clear><ion-icon name="logo-yahoo"></ion-icon></button>
+                <button ion-button clear><ion-icon name="mail"></ion-icon></button>
+            </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+    
+    <ion-toolbar copyright white text-center>
+      <ion-row>
+        <ion-col>
+            Copyright ©mscreativepixel.com 2016. All rights reserved.
+        </ion-col>
+      </ion-row>
+    </ion-toolbar>
+    <!--./Footer-->
+    
+</ion-content>
