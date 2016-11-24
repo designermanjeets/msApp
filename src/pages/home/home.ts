@@ -17,7 +17,7 @@ export class HomePage {
 
     onPageScroll(event) {
         //console.log(event.target.scrollTop);
-         console.log(aboutmeOffset + 'dsadadad');
+        //console.log(aboutmeOffset + 'dsadadad');
         
         
         
@@ -25,7 +25,7 @@ export class HomePage {
     ngAfterViewInit() {
         this.content.addScrollListener(this.onPageScroll);
         let aboutmeOffset = this.aboutme.nativeElement.offsetTop;
-        console.log(this.aboutme.nativeElement.offsetTop);
+        console.log(aboutmeOffset);
     }
 
         scrollToAbout(){
