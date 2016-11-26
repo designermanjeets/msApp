@@ -74,7 +74,7 @@ ion-card.card { margin: 0; width: calc(100%); }
         background-color: rgba(0, 0, 0, 0.4);
         border-radius: 100px;
     }
-    .bar-button-menutoggle { display: none; }
+    .bar-button-menutoggle, [visible-xs] { display: none; }
 }
 
 @media all and (max-width:768px){  

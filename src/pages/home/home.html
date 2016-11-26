@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header hidden-xs>
   <ion-toolbar>
     <ion-title><a href="#"><img src="../../assets/img/mscreativepixel_logo.png" alt=""/></a></ion-title>
   </ion-toolbar>
@@ -14,25 +14,40 @@
     </button>
   </ion-navbar>
 </ion-header>
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Navigation</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content>
-    <ion-list>
+<ion-content padding #content>
+    <ion-header visible-xs>
+      <ion-toolbar>
+        <ion-title><a href="#"><img src="../../assets/img/mscreativepixel_logo.png" alt=""/></a></ion-title>
+      </ion-toolbar>
+      <ion-navbar class="desktop-navbar">
         <button ion-item>Home</button>
         <button ion-item>About</button>
         <button ion-item>Portfolio</button>
         <button ion-item>Blog</button>
         <button ion-item>Forum</button>
         <button ion-item>Contact Us</button>
-    </ion-list>
-  </ion-content>
-</ion-menu>
-<ion-content padding #content>
-    
+        <button ion-button menuToggle icon-only>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+      </ion-navbar>
+    </ion-header>
+    <ion-menu [content]="content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Navigation</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+            <button ion-item>Home</button>
+            <button ion-item>About</button>
+            <button ion-item>Portfolio</button>
+            <button ion-item>Blog</button>
+            <button ion-item>Forum</button>
+            <button ion-item>Contact Us</button>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
     <!--Slider-->
     <ion-slides #mySlider>
         <ion-slide>
