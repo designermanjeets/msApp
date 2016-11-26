@@ -1,7 +1,7 @@
 import { Component, ViewChild} from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Content } from 'ionic-angular';
-import { App, MenuController } from 'ionic-angular';
+import { MenuController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -18,7 +18,7 @@ export class HomePage {
   constructor(public navCtrl: NavController, menu: MenuController) {menu.enable(true); }
 
     onPageScroll(event) {
-        
+        console.log(event.target.scrollTop);
         if (event.target.scrollTop>document.querySelector('#intrested-sectors').offsetTop-100){
             console.log('Greater Than');       
             let outerCircles =  document.querySelectorAll('#intrested-sectors [outer-circle]');
