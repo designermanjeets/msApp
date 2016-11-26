@@ -16,27 +16,28 @@
 // automatically applied to the <body> element in the app.
 
 * {transition: all 0.4s ease; }
-
-ion-header { background-color: #0d435c; border-color: #092e3f; height: 52px; }
-ion-navbar.desktop-navbar { background-color: #0d435c; min-height: 50px; transform:none; padding: 0; position: absolute; right: 0; top: 0; }
-ion-navbar.desktop-navbar .toolbar-content { float: right; }
-ion-navbar.desktop-navbar .toolbar-content .item { float: left; padding: 18px 35px; color: #fff; background: transparent; width: auto; min-height: 0; font-size: 14px; }
-ion-navbar.desktop-navbar .toolbar-content .item .item-inner { border-bottom: none; padding-right: 0; }
-ion-navbar.desktop-navbar .toolbar-content .item ion-label.label { margin: 0; }
-ion-navbar.desktop-navbar .toolbar-content .item.activated,
-ion-navbar.desktop-navbar .toolbar-content .item:nth-child(1) { background: #092e3f; }
-ion-navbar.desktop-navbar .toolbar-content .item:nth-last-child(1) { background: #0e89bc; }
+ion-header { background-color: #0d435c; border-color: #092e3f; height: 52px;
+    .toolbar { position: fixed; }
+}
+ion-navbar.desktop-navbar { background-color: #0d435c; min-height: 50px; transform:none; padding: 0; position: absolute; right: 0; top: 0;
+    .toolbar-content { float: right;
+        .item { float: left; padding: 18px 35px; color: #fff; background: transparent; width: auto; min-height: 0; font-size: 14px; 
+            .item-inner { border-bottom: none; padding-right: 0; }
+            ion-label.label { margin: 0; }
+        }
+        .item.activated, .item:nth-child(1) { background: #092e3f; }
+        .item:nth-last-child(1) { background: #0e89bc; }
+    }
+}
 
 .toolbar { padding: 0; width: auto; }
 .toolbar[padding-vertical] { padding-top: 16px; padding-bottom: 16px; }
-ion-header .toolbar { position: fixed; }
 .toolbar-background { background: transparent; border: none; }
 .toolbar-title { color: #fff; padding: 0; }
-
-ion-content .scroll-content { padding: 0!important; }
-
+ion-content {
+    .scroll-content { padding: 0!important; }
+}
 ion-card.card { margin: 0; width: calc(100%); }
-
 
 
 
@@ -53,7 +54,35 @@ ion-card.card { margin: 0; width: calc(100%); }
 [overlay-content] { position: relative; z-index: 2; }
 .button { background-color: #36b0fd; border-radius: 0; }
 :root .button:hover { background-color: #092e3f; }
+[inline-block] { display: inline-block !important; }
 
+
+
+
+
+
+@media all and (min-width:769px){ 
+    ::-webkit-scrollbar {
+        background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.4);
+        border: solid whiteSmoke 4px;
+        border-radius: 100px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 100px;
+    }
+    .bar-button-menutoggle { display: none; }
+}
+
+@media all and (max-width:768px){  
+    [hidden-xs] { display: none !important; }
+    ion-header ion-toolbar.toolbar { position: static; float: left; width: 225px;}
+    ion-header .desktop-navbar { position: absolute; }
+    ion-header ion-toolbar.toolbar ion-title { position: static; height: auto; width: auto; padding: 0; }
+}
 
 /*arrow pointing down animation*/
 @-webkit-keyframes gone-before { 
@@ -77,15 +106,5 @@ ion-card.card { margin: 0; width: calc(100%); }
 75% { transform: translateX(0); } }
 
 
-::-webkit-scrollbar {
-    background: transparent;
-}
-::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: solid whiteSmoke 4px;
-    border-radius: 100px;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 100px;
-}
+
+

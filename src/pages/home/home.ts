@@ -1,6 +1,7 @@
-import { Component, ViewChild,Renderer} from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Content } from 'ionic-angular';
+import { App, MenuController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
@@ -14,14 +15,23 @@ export class HomePage {
   @ViewChild(Content) content:Content;
 
 
-  constructor(public navCtrl: NavController, private renderer:Renderer) { }
+  constructor(public navCtrl: NavController, menu: MenuController) {menu.enable(true); }
 
     onPageScroll(event) {
         
-        if (event.target.scrollTop>document.querySelector('.yoman').offsetTop){
-            console.log('Greater Than');
+        if (event.target.scrollTop>document.querySelector('#intrested-sectors').offsetTop-100){
+            console.log('Greater Than');       
+            let outerCircles =  document.querySelectorAll('#intrested-sectors [outer-circle]');
+            for( let i=0; i < outerCircles.length; i++ ) {
+                outerCircles[i].classList.add('animate');
+             }
+            
         } else {
             console.log('Less Than');
+            let outerCircles =  document.querySelectorAll('#intrested-sectors [outer-circle]');
+            for( let i=0; i < outerCircles.length; i++ ) {
+                outerCircles[i].classList.remove('animate');
+             }
         }
      
         
@@ -30,7 +40,7 @@ export class HomePage {
 
     ngAfterViewInit() {
         this.content.addScrollListener(this.onPageScroll);
-         console.log(this.renderer.selectRootElement('.yoman'));
+        
     }
 
     scrollToAbout(){

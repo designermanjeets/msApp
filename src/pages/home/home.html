@@ -9,6 +9,9 @@
     <button ion-item>Blog</button>
     <button ion-item>Forum</button>
     <button ion-item>Contact Us</button>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
   </ion-navbar>
 </ion-header>
 
@@ -38,7 +41,7 @@
     <!--./Contact Us Mid-->
     
     <!--About Me-->
-    <ion-grid aboutme #aboutme class="yoman">
+    <ion-grid aboutme #aboutme>
       <ion-row>
         <ion-col width-33><img src="../../assets/img/circle_bg_about_me.png" alt=""/></ion-col>
         <ion-col width-75>
@@ -54,31 +57,27 @@ I've around 5 years of experience in web/graphic design and in front end develop
     <!--./About Me-->
     
     <!--Intrested Sectors-->
-    <ion-grid intrested-sectors light-blue>
+    <ion-grid intrested-sectors light-blue id="intrested-sectors">
         <ion-row header-sectors>
             <ion-col>
                 <h2 white text-uppercase>Interested Sectors</h2>
             </ion-col>
         </ion-row>
       <ion-row>
-        <ion-col width-33>
-            <div outer-circle pull-right text-center>
+        <ion-col text-center>
+            <div outer-circle cr1 text-center inline-block>
                 <div inner-circle>
                     <h3 text-uppercase white>Our ideas, imagination</h3>
                     <a href="#" circle-link>Circle Link</a>
                 </div>
             </div>
-        </ion-col>
-        <ion-col width-33>
-            <div outer-circle text-center>
+            <div outer-circle text-center inline-block>
                 <div inner-circle>
                     <h3 text-uppercase white>Our ideas, imagination</h3>
                     <a href="#" circle-link>Circle Link</a>
                 </div>
             </div>
-        </ion-col>
-        <ion-col width-33>
-            <div outer-circle pull-left text-center>
+            <div outer-circle cr3 text-center inline-block>
                 <div inner-circle>
                     <h3 text-uppercase white>Our ideas, imagination</h3>
                     <a href="#" circle-link>Circle Link</a>
@@ -319,7 +318,7 @@ I've around 5 years of experience in web/graphic design and in front end develop
     <!--./More Amazing Work-->
     
     <!--Footer-->
-    <ion-toolbar foo white padding-vertical>
+    <ion-toolbar foo white padding-vertical foo>
       <ion-row>
         <ion-col width-50>
             <h2 padding>Leave a Message Here</h2>
