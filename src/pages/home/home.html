@@ -14,7 +14,23 @@
     </button>
   </ion-navbar>
 </ion-header>
-
+<ion-menu [content]="content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Navigation</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+        <button ion-item>Home</button>
+        <button ion-item>About</button>
+        <button ion-item>Portfolio</button>
+        <button ion-item>Blog</button>
+        <button ion-item>Forum</button>
+        <button ion-item>Contact Us</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
 <ion-content padding #content>
     
     <!--Slider-->

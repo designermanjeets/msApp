@@ -158,8 +158,8 @@ page-home {
     
     @media all and (max-width:991px){
         ion-header {
-             ion-toolbar.toolbar { width: 82px; position: relative;
-                 ion-title img { max-width: none; }        
+             ion-toolbar.toolbar { width: 55px; position: relative;
+                 ion-title img { max-width: none; height: 60px; }        
             }
         }
     }
@@ -198,6 +198,10 @@ page-home {
         [foo] h2 { font-size: 20px; }
         [testibox], [copyright] { padding: 20px 0; }
         .bar-buttons { color: #fff !important; }
+        
+        ion-menu {
+            ion-header ion-toolbar.toolbar { width: auto; padding-left: 16px; }
+        }
         
     }
     
