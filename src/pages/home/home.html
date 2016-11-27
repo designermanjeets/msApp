@@ -1,4 +1,4 @@
-<ion-header hidden-xs>
+<ion-header>
   <ion-toolbar>
     <ion-title><a href="#"><img src="../../assets/img/mscreativepixel_logo.png" alt=""/></a></ion-title>
   </ion-toolbar>
@@ -14,30 +14,14 @@
     </button>
   </ion-navbar>
 </ion-header>
-<ion-content padding #content>
-    <ion-header visible-xs>
-      <ion-toolbar>
-        <ion-title><a href="#"><img src="../../assets/img/mscreativepixel_logo.png" alt=""/></a></ion-title>
-      </ion-toolbar>
-      <ion-navbar class="desktop-navbar">
-        <button ion-item>Home</button>
-        <button ion-item>About</button>
-        <button ion-item>Portfolio</button>
-        <button ion-item>Blog</button>
-        <button ion-item>Forum</button>
-        <button ion-item>Contact Us</button>
-        <button ion-button menuToggle icon-only>
-          <ion-icon name='menu'></ion-icon>
-        </button>
-      </ion-navbar>
-    </ion-header>
-    <ion-menu [content]="content">
+
+    <ion-menu [content]="content" side="right" >
       <ion-header>
         <ion-toolbar>
           <ion-title>Navigation</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
+      <ion-navbar #menucontent>
         <ion-list>
             <button ion-item>Home</button>
             <button ion-item>About</button>
@@ -46,8 +30,11 @@
             <button ion-item>Forum</button>
             <button ion-item>Contact Us</button>
         </ion-list>
-      </ion-content>
+      </ion-navbar>
     </ion-menu>
+
+
+<ion-content padding #content>
     <!--Slider-->
     <ion-slides #mySlider>
         <ion-slide>
@@ -74,8 +61,8 @@
     <!--About Me-->
     <ion-grid aboutme #aboutme>
       <ion-row>
-        <ion-col width-33><img src="../../assets/img/circle_bg_about_me.png" alt=""/></ion-col>
-        <ion-col width-75>
+        <ion-col width-33><img src="../../assets/img/me.png" alt=""/></ion-col>
+        <ion-col width-67>
             <h2 text-uppercase>Welcome to MSCREATIVEPIXEL.COM</h2>
             <p>My name is Manjeet Singh a web/Graphic designer and UI developer from city beautiful Chandigarh, India.<br>
 I've around 5 years of experience in web/graphic design and in front end development. I learned all of my design/development skills on the job.</p>
@@ -317,8 +304,45 @@ I've around 5 years of experience in web/graphic design and in front end develop
     </ion-grid>
     <!--./Technologies-->
     
-    <!--More Amazing Work-->
-    <ion-grid testimonials text-center>
+    
+    
+    <!--Testimonials-->
+    <!--Slider-->
+    <ion-grid testimonials visible-xs>
+    <ion-slides [options]="mySlideOptions" #mySlider>
+        <ion-slide>
+            <div testibox>
+                <p><img src="../../assets/img/client.jpg" alt=""></p>
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h2>
+                <h3 text-uppercase padding-top>UMAN - YORITZ</h3>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div testibox>
+                <p><img src="../../assets/img/client2.jpg" alt=""></p>
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h2>
+                <h3 text-uppercase padding-top>UMAN - YORITZ</h3>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div testibox>
+                <p><img src="../../assets/img/client3.jpg" alt=""></p>
+                <h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</h2>
+                <h3 text-uppercase padding-top>UMAN - YORITZ</h3>
+            </div>
+        </ion-slide>
+      </ion-slides>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </ion-grid>
+    <!--./Slider-->
+    <!--./Testimonials-->
+    
+    <!--Testimonials-->
+    <ion-grid testimonials text-center hidden-xs>
         <ion-row>
             <ion-col width-33>
                 <div testibox>
@@ -346,7 +370,7 @@ I've around 5 years of experience in web/graphic design and in front end develop
             </ion-col>
         </ion-row>
     </ion-grid>
-    <!--./More Amazing Work-->
+    <!--./Testimonials-->
     
     <!--Footer-->
     <ion-toolbar foo white padding-vertical foo>

@@ -15,6 +15,7 @@ page-home {
         h2 { text-shadow: 0 -1px 0 #999999; font-weight: normal; font-size: 24px; color: #feb000; word-spacing: 5px; }
         p { padding-top: 10px; font-size: 16px; }
         .item-button { padding: 0 1.1em; height: 3.6rem; }
+        img { border-radius: 100%; background: #fff; padding: 5px; border: 1px solid #ddd; }
     }
     
     [intrested-sectors] { padding: 50px 0; }
@@ -103,7 +104,7 @@ page-home {
             h2 { font-size: 17px; }
         }
         .scrollto-prtflo { width: 40px; height: 40px; background-size:cover; margin-top: 10px; }
-        .swiper-container { padding: 30px 0; }
+        .swiper-container { padding: 75px 0 30px; }
         button { font-size: 1.2rem; }
     }
     
@@ -132,6 +133,9 @@ page-home {
         h2 { font-size: 28px; }
         .scrollto-prtflo { width: 64px; height: 64px; margin: 50px auto 0 auto; }
         .swiper-container { padding: 100px 0 50px; }
+        [aboutme] {
+            img { width: 250px; height: 250px; }
+        }
     }
     
     @media all and (min-width:991px){
@@ -181,8 +185,9 @@ page-home {
         [aboutme] {
             ion-row { display: block; text-align: center; }
             ion-col[width-33] { margin: 0 auto; }
-            ion-col[width-75] { flex: 100%; max-width: none; }
+            ion-col[width-67] { flex: 100%; max-width: none; }
             p { padding-top: 10px; font-size: 14px; line-height: 1.5; }
+            img { width: 150px; height: 150px; }
         }
         
         [header-sectors] { padding: 10px 20px 5px;
@@ -191,11 +196,17 @@ page-home {
         [counters] ion-icon { font-size: 35px; }
         [intrested-sectors] { padding-top: 0; }
         [recent-work-row], [header-sectors] { margin: 0; margin-bottom: 20px; }
-        [recent-work-row] ion-card-content, [foo] ion-row { display: none; }
-        [recent-work-row], [testimonials] ion-row, [foo] ion-row { display: block; }
-        [recent-work-row] ion-col, [testimonials] ion-col, [foo] ion-col { flex: 100%; max-width: none; margin-left: 0; }
-        [foo] form { padding-right: 16px; }
-        [foo] h2 { font-size: 20px; }
+        [recent-work-row] {
+            display: block;
+            ion-col { flex: 50%; max-width: 50%; float: left; }
+            ion-card-content { display: none; }
+        }
+        [testimonials] ion-row, [foo] ion-row { display: block; }
+        [testimonials] ion-col, [foo] ion-col { flex: 100%; max-width: none; margin-left: 0; }
+        [foo] {
+            form { padding-right: 16px; }
+            h2 { font-size: 20px; }
+        }
         [testibox], [copyright] { padding: 20px 0; }
         .bar-buttons { color: #fff !important; }
         
@@ -209,6 +220,12 @@ page-home {
                 h3 { text-transform: capitalize; }
             }
         }
+        [testimonials] {
+             position: relative; 
+            .slides { background: transparent; margin: 0;}
+        } 
+        
+        .menu-inner ion-list.list { padding-top: 52px; }
         
     }
     
@@ -224,6 +241,7 @@ page-home {
             h3 { font-size: 13px; padding: 2px 0; }
         }
         [inner-circle] { width: 80px; height: 80px; }
+        [aboutme] ion-col[width-33] { max-width: none; }
     }
     
     

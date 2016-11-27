@@ -13,11 +13,24 @@ export class HomePage {
   @ViewChild(Content) content:Content;
 
 
-  constructor(public navCtrl: NavController, menu: MenuController) {menu.enable(true); }
+  constructor(public navCtrl: NavController, menu: MenuController) {
+      menu.enable(true);
+      
+      this.mySlideOptions = {
+        slidesPerView:1,
+        pager: true,
+          nextButton: ".swiper-button-next",
+          prevButton: ".swiper-button-prev",        
+            onInit:()=>{
+          }
+      }
+          
+  }
 
     onPageScroll(event) {
         //console.log(event.target.scrollTop);
-        if (event.target.scrollTop>document.querySelector('#intrested-sectors').offsetTop-100){
+        //if (event.target.scrollTop>document.querySelector('#intrested-sectors').offsetTop-100){
+        if (event.target.scrollTop>500){
             console.log('Greater Than');       
             let outerCircles =  document.querySelectorAll('#intrested-sectors [outer-circle]');
             for( let i=0; i < outerCircles.length; i++ ) {
@@ -34,7 +47,6 @@ export class HomePage {
      
         
     }
-
 
     ngAfterViewInit() {
         this.content.addScrollListener(this.onPageScroll);

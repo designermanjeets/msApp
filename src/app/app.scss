@@ -39,6 +39,16 @@ ion-content {
 }
 ion-card.card { margin: 0; width: calc(100%); }
 
+//ion-menu[type=reveal].show-menu {z-index: 80; }
+//ion-menu[type=reveal].show-menu .show-backdrop { display: block; opacity: 0.35; background-color: #000; }
+ion-menu {
+    &.show-menu { z-index: 11;
+        ion-header { line-height: 52px; }
+        ion-backdrop { display: block; opacity: .7; }
+    }
+    
+}
+
 
 
 /**************Common Classes***********/
@@ -75,6 +85,15 @@ ion-card.card { margin: 0; width: calc(100%); }
         border-radius: 100px;
     }
     .bar-button-menutoggle, [visible-xs] { display: none; }
+    
+    ion-header {
+        &.header-ios { 
+            ion-toolbar { position: static; }
+            ion-title { padding-left: 0; width: 325px; display: block;}
+            ion-navbar.desktop-navbar .item-inner { background-image: none; }
+        }
+    } 
+    
 }
 
 @media all and (max-width:768px){  
