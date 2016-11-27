@@ -29,8 +29,8 @@ export class HomePage {
 
     onPageScroll(event) {
         //console.log(event.target.scrollTop);
-        //if (event.target.scrollTop>document.querySelector('#intrested-sectors').offsetTop-100){
-        if (event.target.scrollTop>500){
+        if (event.target.scrollTop>document.querySelector('#intrested-sectors').offsetTop-100){
+        //if (event.target.scrollTop>500){
             console.log('Greater Than');       
             let outerCircles =  document.querySelectorAll('#intrested-sectors [outer-circle]');
             for( let i=0; i < outerCircles.length; i++ ) {
