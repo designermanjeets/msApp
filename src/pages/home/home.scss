@@ -60,7 +60,7 @@ page-home {
     
 
     [icon-wrap] { font-size: 55px; border: 1px solid #ccc; background: #fff; width: 175px; height: 175px; line-height: 175px; display: block; margin: 0 auto; border-radius: 100%; color: #092e3f;
-        :hover { color: #fff; background: #0d435c; transform: scale(1.2); }
+        &:hover { color: #fff; background: #0d435c; transform: scale(1.2); }
     }
     [icon-wrap] + p { font-size: 21px; text-transform: uppercase; }
 
