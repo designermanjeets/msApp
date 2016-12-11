@@ -1,6 +1,8 @@
 import { Component, ViewChild} from '@angular/core';
-import { NavController, Content, MenuController } from 'ionic-angular';
+import { NavController, Content, MenuController, AlertController, Platform } from 'ionic-angular';
 import { Http, Headers } from '@angular/http';
+import { BarcodeScanner } from 'ionic-native';
+import 'rxjs/add/operator/timeout';
 
 @Component({
   selector: 'page-home',
@@ -15,7 +17,7 @@ export class HomePage {
   mySlideOptions : any;
   logoUrl : string;
  
-  constructor(public navCtrl: NavController, menu: MenuController, public http: Http ) {
+  constructor(public navCtrl: NavController, menu: MenuController, public http: Http, private alertCtrl: AlertController, public platform: Platform ) {
       menu.enable(true);
       
       this.mySlideOptions = {
@@ -37,6 +39,8 @@ export class HomePage {
 
       //Below images for lazy load 
       this.logoUrl ="../../assets/img/mscreativepixel_logo.png";
+      
+      
       
         /*this.displayData = [{
             "title": "",
@@ -82,6 +86,48 @@ export class HomePage {
      
       
   }
+
+
+      
+       scan() {
+           setTimeout(() => {  
+                this.platform.ready().then(() => {
+                   BarcodeScanner.scan().then((barcodeData) => {
+                     // Success! Barcode data is here
+
+                       let alert = this.alertCtrl.create({
+                        title: 'Confirm result',
+                        message: 'Do you wanna go with this result',
+                        buttons: [
+                          {
+                            text: 'Cancel',
+                            role: 'cancel',
+                            handler: () => {
+                              console.log('Cancelled');
+                            }
+                          },
+                          {
+                            text: 'Agree',
+                            handler: () => {
+                              console.log('Agreed');
+                            }
+                          }
+                        ]
+                      });
+                      alert.present();
+
+                    }, (err) => {
+                        // An error occurred
+                       let alert = this.alertCtrl.create({
+                        title: 'Attention',
+                        subTitle: 'Dunno whats is wrong again',
+                        buttons: ['Dismiss']
+                      });
+                      alert.present();
+                  });
+               });
+            }, 1);
+       }
 
     onPageScroll(event) {
         //console.log(event.target.scrollTop);
