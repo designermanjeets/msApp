@@ -163,7 +163,10 @@ page-home {
     @media all and (max-width:991px){
         ion-header {
              ion-toolbar.toolbar { width: 55px; position: relative;
-                 ion-title img { max-width: none; height: 60px; }        
+                 ion-title {
+                     ion-img { display: block; }
+                     img { max-width: none; height: 60px; }
+                 }
             }
         }
     }

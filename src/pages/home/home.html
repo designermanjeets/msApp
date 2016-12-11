@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title><a href="#"><img src="../../assets/img/mscreativepixel_logo.png" alt=""/></a></ion-title>
+    <ion-title><a href="#"><ion-img [src]="logoUrl"></ion-img></a></ion-title>
   </ion-toolbar>
   <ion-navbar class="desktop-navbar">
     <button ion-item>Home</button>
@@ -135,7 +135,6 @@ I've around 5 years of experience in web/graphic design and in front end develop
     </ion-grid>
     <!--./Counters-->
     
-    
     <!--Recent Work-->
     <ion-grid intrested-sectors recent-work>
         <ion-row header-sectors>
@@ -143,106 +142,29 @@ I've around 5 years of experience in web/graphic design and in front end develop
                 <h2 white text-uppercase>Recent Work</h2>
             </ion-col>
         </ion-row>
-      <ion-row recent-work-row text-center>
-        <ion-col width-25>
-            <ion-card>
-              <img src="../../assets/img/slider-img44.jpg" alt="">
-              <ion-card-content>
-                <h2>Marty McFly</h2>
-                <p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
-              </ion-card-content>
-              <ion-row>
-                <ion-col text-right>
-                  <button primary clear small>
-                    <ion-icon name="logo-angular"></ion-icon>
-                  </button>
-                </ion-col>
-                <ion-col>
-                  <button primary clear small>
-                    <ion-icon name="ionic"></ion-icon>
-                  </button>
-                </ion-col>
-              </ion-row>
-            </ion-card>
-        </ion-col>
-        <ion-col width-25>
-            <ion-card>
-              <img src="../../assets/img/slider-img44.jpg" alt="">
-              <ion-card-content>
-                <h2>Marty McFly</h2>
-                <p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
-              </ion-card-content>
-              <ion-row>
-                <ion-col width-33 text-right>
-                  <button primary clear small>
-                    <ion-icon name="logo-angular"></ion-icon>
-                  </button>
-                </ion-col>
-                <ion-col width-33 text-center>
-                  <button primary clear small>
-                    <ion-icon name="logo-android"></ion-icon>
-                  </button>
-                </ion-col>
-                <ion-col width-33>
-                  <button primary clear small>
-                    <ion-icon name="logo-angular"></ion-icon>
-                  </button>
-                </ion-col>
-              </ion-row>
-            </ion-card>
-        </ion-col>
-        <ion-col width-25>
-            <ion-card>
-              <img src="../../assets/img/slider-img44.jpg" alt="">
-              <ion-card-content>
-                <h2>Marty McFly</h2>
-                <p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
-              </ion-card-content>
-              <ion-row text-center>
-                <ion-col width-25>
-                  <button primary clear small>
-                    <ion-icon name="logo-html5"></ion-icon>
-                  </button>
-                </ion-col>
-                <ion-col width-25>
-                  <button primary clear small>
-                    <ion-icon name="logo-angular"></ion-icon>
-                  </button>
-                </ion-col>
-                <ion-col width-25>
-                  <button primary clear small>
-                    <ion-icon name="logo-android"></ion-icon>
-                  </button>
-                </ion-col>
-                <ion-col width-25>
-                  <button primary clear small>
-                    <ion-icon name="ionic"></ion-icon>
-                  </button>
-                </ion-col>
-              </ion-row>
-            </ion-card>
-        </ion-col>
-        <ion-col width-25>
-            <ion-card>
-              <img src="../../assets/img/slider-img44.jpg" alt="">
-              <ion-card-content>
-                <h2>Marty McFly</h2>
-                <p>Wait a minute. Wait a minute, Doc. Uhhh...</p>
-              </ion-card-content>
-              <ion-row>
-                <ion-col text-right>
-                  <button primary clear small>
-                    <ion-icon name="logo-angular"></ion-icon>
-                  </button>
-                </ion-col>
-                <ion-col>
-                  <button primary clear small>
-                    <ion-icon name="ionic"></ion-icon>
-                  </button>
-                </ion-col>
-              </ion-row>
-            </ion-card>
-        </ion-col>
+        <ion-row recent-work-row text-center *ngFor="let data of displayData" >
+            <ion-col width-25 *ngFor="let item of data.items">
+                <ion-card>
+                  <ion-img [src]="item.itemUrl"></ion-img>
+                  <ion-card-content>
+                    <h2>{{item.title}}</h2>
+                    <p>{{item.info}}</p>
+                  </ion-card-content>
+                  <ion-row>
+                    <ion-col text-right *ngFor="let icn of item.icns">
+                      <button primary clear small>
+                        <ion-icon name={{item.icn}}></ion-icon>
+                      </button>
+                    </ion-col>
+                    <ion-col>
+                      <button primary clear small>
+                        <ion-icon name="ionic"></ion-icon>
+                      </button>
+                    </ion-col>
+                  </ion-row>
+                </ion-card>
+            </ion-col>          
+          
       </ion-row>
     </ion-grid>
     <!--./Recent Work-->
